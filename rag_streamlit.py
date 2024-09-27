@@ -11,11 +11,11 @@ from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
 warnings.filterwarnings('ignore')
 
-directory = r"F:\Files\tutorials\PDF\New folder"
+#directory = r"F:\Files\tutorials\PDF\New folder"
 files = [os.path.join(directory,f) for f in os.listdir(directory) if f.endswith('pdf')]
 
 token = "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"
-custom_directory = r"F:\Files\Portfolio\models"
+#custom_directory = r"F:\Files\Portfolio\models"
 model_name = "meta-llama/Llama-3.2-1B"
 tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir=custom_directory,use_auth_token=token)
 model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=custom_directory,use_auth_token=token)
@@ -50,36 +50,27 @@ prompt = PromptTemplate(
 llm = pipeline("text-generation", model=model, tokenizer=tokenizer, max_length=30, temperature=0.12)
 rag_chain = prompt | llm | StrOutputParser()
 
-ques = "Fundamental Rights in Pakistan?"
-retrieved_docs = retriver.get_relevant_documents(query=ques)
-retreived_text = "\n".join([doc.page_content for doc in retrieved_docs])
 
-
-#response = rag_chain.invoke({"question":ques,'documents':retreived_text})
-#limited_response =   response# Take the first 3 sentences
-
-generated_prompt = prompt.format({"question": ques, "documents": retreived_text})
-
-# Run the LLM model with the generated prompt
-llm_response = llm(generated_prompt)[0]['generated_text']
 
 st.title("RAG based Assistance bot")
 query = st.chat_input("Enter your query:")
 if 'messages' not in st.session_state:
         st.session_state.messages = []
 if query:
-       #st.chat_message("user").markdown(query)
-       #st.text_input("Enter:")
-       #retrieved_docs = retriver.get_relevant_documents(query=query)
-       #retreived_text = "\n".join([doc.page_content for doc in retrieved_docs])
-       #response = rag_chain.invoke({"question":query,"documents":retreived_text})
+       st.chat_message("user").markdown(query)
+       retrieved_docs = retriver.get_relevant_documents(query=query)
+       retreived_text = "\n".join([doc.page_content for doc in retrieved_docs])
+       response = rag_chain.invoke({"question":query,"documents":retreived_text})
+       generated_prompt = prompt.format({"question": ques, "documents": retreived_text})
+
+       llm_response = llm(generated_prompt)[0]['generated_text']
        st.write(llm_response)
        st.write(generated_prompt)
-       #st.session_state.messages.append({'role':'user','content':query})
-       #st.chat_message('ai').markdown(response)
-       #st.session_state.messages.append({'role':'ai','content':response})
-       #clear_chat = st.button("Clear Chat")
-#else:
-   #clear_chat = False
-#if clear_chat:
-#      st.session_state.messages = []
+       st.session_state.messages.append({'role':'user','content':query})
+       st.chat_message('ai').markdown(response)
+       st.session_state.messages.append({'role':'ai','content':response})
+       clear_chat = st.button("Clear Chat")
+else:
+   clear_chat = False
+if clear_chat:
+      st.session_state.messages = []
