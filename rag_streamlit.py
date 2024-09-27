@@ -11,15 +11,20 @@ from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
 warnings.filterwarnings('ignore')
 uploaded_file = st.file_uploader("Choose a document", type=["pdf", "docx", "txt"])
+@st.cache_resource
+def load_model_and_tokenizer(model_name, token):
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token=token)
+    model = AutoModelForCausalLM.from_pretrained(model_name, use_auth_token=token)
+    return tokenizer, model
 #directory = r"F:\Files\tutorials\PDF\New folder"
 if uploaded_file is not None:
     token = st.sidebar.text_input("Hugging Face Token")
+    model_name = st.sidebar.selectbox("Select Model",["LLAMA 3.2","QWEN 2.5"])
     if token:
         #custom_directory = r"F:\Files\Portfolio\models"
         st.write("Loading Model")
         model_name = "meta-llama/Llama-3.2-1B"
-        tokenizer = AutoTokenizer.from_pretrained(model_name,use_auth_token=token)
-        model = AutoModelForCausalLM.from_pretrained(model_name, use_auth_token=token)
+        tokenizer, model = load_model_and_tokenizer(model_name, token)
         st.write("Loading File")
         loader = PyMuPDFLoader(uploaded_file)
     
