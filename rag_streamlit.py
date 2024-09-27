@@ -13,7 +13,7 @@ warnings.filterwarnings('ignore')
 uploaded_file = st.file_uploader("Choose a document", type=["pdf", "docx", "txt"])
 #directory = r"F:\Files\tutorials\PDF\New folder"
 if uploaded_file is not None:
-    token = st.text_input("Hugging Face Token")
+    token = st.sidebar.text_input("Hugging Face Token")
     if token:
         #custom_directory = r"F:\Files\Portfolio\models"
         st.write("Loading Model")
