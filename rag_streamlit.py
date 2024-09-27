@@ -13,23 +13,27 @@ warnings.filterwarnings('ignore')
 uploaded_file = st.file_uploader("Choose a document", type=["pdf", "docx", "txt"])
 #directory = r"F:\Files\tutorials\PDF\New folder"
 if uploaded_file is not None:
-        
-    
-    token = "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"
+    token = st.text_input("Hugging Face Token")
     #custom_directory = r"F:\Files\Portfolio\models"
+    st.write("Loading Model")
     model_name = "meta-llama/Llama-3.2-1B"
     tokenizer = AutoTokenizer.from_pretrained(model_name,use_auth_token=token)
     model = AutoModelForCausalLM.from_pretrained(model_name, use_auth_token=token)
+    st.write("Loading File")
+    loader = PyMuPDFLoader(uploaded_file)
+
+    # Load the document
+    docs = loader.load()
+
+    # Optionally display some information about the document
+    st.write(f"Loaded {len(docs)} document chunks.")
     
-    docs = []
-    for file in files:
-        loader = PyMuPDFLoader(file)
-        loaded_doc = loader.load()
-        docs.extend(loaded_doc)
-    
+    # Display the contents of the loaded document
+    st.write("Splitting")
     splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=1000,chunk_overlap=15)
     splitted_docs = splitter.split_documents(docs)
-    
+
+    st.write("Embedding")
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     
     vector_db = FAISS.from_documents(documents=splitted_docs,embedding=embeddings)
@@ -47,7 +51,7 @@ if uploaded_file is not None:
         """,
         input_variables=['question',"documents"]
     )
-    
+    st.write("LLM")
     llm = pipeline("text-generation", model=model, tokenizer=tokenizer, max_length=30, temperature=0.12)
     rag_chain = prompt | llm | StrOutputParser()
     
