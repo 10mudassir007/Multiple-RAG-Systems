@@ -19,7 +19,7 @@ def load_model_and_tokenizer(model_name, token):
 #directory = r"F:\Files\tutorials\PDF\New folder"
 if uploaded_file is not None:
     token = st.sidebar.text_input("Hugging Face Token")
-    model_name = "Qwen/Qwen2-0.5B"
+    model_name = "gpt2"
     if token:
         #custom_directory = r"F:\Files\Portfolio\models"
         st.write("Loading Model")
