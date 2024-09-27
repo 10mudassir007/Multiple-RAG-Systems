@@ -18,8 +18,8 @@ if uploaded_file is not None:
     token = "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"
     #custom_directory = r"F:\Files\Portfolio\models"
     model_name = "meta-llama/Llama-3.2-1B"
-    tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir=custom_directory,use_auth_token=token)
-    model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=custom_directory,use_auth_token=token)
+    tokenizer = AutoTokenizer.from_pretrained(model_name,use_auth_token=token)
+    model = AutoModelForCausalLM.from_pretrained(model_name, use_auth_token=token)
     
     docs = []
     for file in files:
