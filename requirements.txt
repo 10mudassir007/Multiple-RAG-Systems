@@ -4,3 +4,4 @@ langchain-community==0.3.0
 langchain-core==0.3.5
 transformers==4.44.2
 PyMuPDF==1.24.5
+torch==2.4.0
