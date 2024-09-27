@@ -23,7 +23,6 @@ if uploaded_file is not None:
     if token:
         #custom_directory = r"F:\Files\Portfolio\models"
         st.write("Loading Model")
-        model_name = "meta-llama/Llama-3.2-1B"
         tokenizer, model = load_model_and_tokenizer(model_name, token)
         st.write("Loading File")
         loader = PyMuPDFLoader(uploaded_file)
