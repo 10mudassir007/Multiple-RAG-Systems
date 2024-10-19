@@ -81,8 +81,6 @@ if uploaded_file is not None:
             res_str = ' '.join(response)
             st.chat_message('ai').write_stream(response)
             st.session_state.messages.append({'role':'ai','content':res_str})
-            for chats in st.session_state.messages:
-                 st.chat_message(chats['role']).markdown(chats['content'])
             clear_chat = st.button("Clear Chat")
         else:
             clear_chat = False
