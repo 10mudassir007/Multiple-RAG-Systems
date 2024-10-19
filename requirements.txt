@@ -5,3 +5,4 @@ langchain-core==0.3.5
 langchain-huggingface==0.1.0
 langchain-groq== 0.2.0
 PyMuPDF==1.24.5
+tiktoken==0.7.0
