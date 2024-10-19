@@ -84,7 +84,7 @@ if uploaded_file is not None:
             clear_chat = st.button("Clear Chat")
         else:
             clear_chat = False
-        if clear_chat or st.rerun():
+        if clear_chat:
                 st.session_state.messages = []
 else:
     st.write("Upload File")
