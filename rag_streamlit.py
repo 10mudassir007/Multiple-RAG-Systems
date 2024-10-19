@@ -80,7 +80,7 @@ if uploaded_file is not None:
             response = generate(query)
             res_str = ' '.join(response)
             st.write(res_str)
-            st.chat_message('ai').write_stream(response)
+            st.chat_message('ai').markdown(res_str)
             st.session_state.messages.append({'role':'ai','content':res_str})
             clear_chat = st.button("Clear Chat")
         else:
