@@ -11,14 +11,18 @@ from langchain_groq import ChatGroq
 import streamlit as st
 from io import BytesIO
 from dotenv import load_dotenv
-
-# Load environment variables from .env file
+st.set_page_config(
+    page_title="RAG BOT",
+    page_icon=":material/search:",
+    layout='wide',
+)
 load_dotenv()
 
-# Access the GROQ API key
 groq_api = os.getenv("GROQ_API_KEY")
 
 warnings.filterwarnings('ignore')
+
+st.title("RAG BASED DOCUMENT BOT")
 
 uploaded_file = st.file_uploader("Choose a document",accept_multiple_files=True, type=["pdf", "docx", "txt"])
 if uploaded_file is not None:
