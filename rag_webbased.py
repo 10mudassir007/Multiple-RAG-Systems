@@ -106,6 +106,6 @@ if st.session_state.url:
 
         for messages in st.session_state.history[:-1]:
             st.chat_message("user").markdown(messages[0])
-            st.chat_message('ai').markdown(stream(messages[1]))
+            st.chat_message('ai').markdown(messages[1])
         st.chat_message("user").markdown(query)
         st.chat_message('ai').write_stream(stream(response))
