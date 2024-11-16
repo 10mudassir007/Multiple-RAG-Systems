@@ -57,7 +57,7 @@ if st.session_state.url:
     
     prompt = ChatPromptTemplate.from_messages([
         SystemMessagePromptTemplate.from_template(
-            "You are an assistant for question-answering tasks. Use the following text extracted from a webpage to answer the question. Include the user's conversation history for context. If you don't know the answer, just say that you don't know and don't hallucinate answers. Use three sentences maximum and keep the answer concise and brief."
+            "You are an assistant for question-answering tasks. Use the following text extracted from a webpage to answer the question. Include the user's conversation history for context. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise and brief."
         ),
         HumanMessagePromptTemplate.from_template(
             "History: {history}\nQuestion: {question}\nDocuments: {documents}"
