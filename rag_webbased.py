@@ -35,7 +35,7 @@ if 'url' not in st.session_state:
 #https://medium.com/@myscale/enhancing-advanced-rag-systems-using-reranking-with-langchain-523a0b840311
 if st.session_state.url == "":
     url = st.sidebar.text_input("Enter URL")
-    url = "https://medium.com/@myscale/enhancing-advanced-rag-systems-using-reranking-with-langchain-523a0b840311"
+    #url = "https://medium.com/@myscale/enhancing-advanced-rag-systems-using-reranking-with-langchain-523a0b840311"
     if url:
         st.session_state.url = url
 
