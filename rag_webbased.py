@@ -20,7 +20,7 @@ url = "https://medium.com/@myscale/enhancing-advanced-rag-systems-using-rerankin
 if url:
     if 'url' not in st.session_state:
         st.session_state.url = url
-    loader = WebBaseLoader(web_paths=[st.session_state.url])
+    loader = WebBaseLoader(web_paths=[url])
     documents = loader.load()
 
     splitter = RecursiveCharacterTextSplitter(chunk_size=700,
