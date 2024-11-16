@@ -1,13 +1,14 @@
 import os 
-from urllib import response
+import time
 import warnings
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.docstore.in_memory import InMemoryDocstore
 from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate, AIMessagePromptTemplate
 from langchain_groq import ChatGroq
+from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
 from io import BytesIO
 from dotenv import load_dotenv
@@ -16,48 +17,47 @@ load_dotenv()
 groq_key = os.getenv("GROQ_API_KEY")
 warnings.filterwarnings('ignore')
 
+st.title("RAG For WebPages")
+
 def retrieve_docs(query : str):
   retrieved_docs = retriever.invoke(query)
   retrieved_text = "\n".join([page.page_content for page in retrieved_docs])
   return retrieved_text
 
+def stream(inputs : str):
+    for i in inputs.split():
+        yield i + " "
+        time.sleep(0.07)
+
+if 'url' not in st.session_state:
+    st.session_state.url = ""
 
 #https://medium.com/@myscale/enhancing-advanced-rag-systems-using-reranking-with-langchain-523a0b840311
-url = st.text_input("Enter url")
-url = "https://medium.com/@myscale/enhancing-advanced-rag-systems-using-reranking-with-langchain-523a0b840311"
-if url:
-    if 'url' not in st.session_state:
+if st.session_state.url == "":
+    url = st.sidebar.text_input("Enter URL")
+    url = "https://medium.com/@myscale/enhancing-advanced-rag-systems-using-reranking-with-langchain-523a0b840311"
+    if url:
         st.session_state.url = url
-    st.rerun()
-    st.write(url)
-    st.write(st.session_state)
+
+if st.session_state.url:
+    
     loader = WebBaseLoader(web_paths=[st.session_state.url])
     documents = loader.load()
-
     splitter = RecursiveCharacterTextSplitter(chunk_size=700,
                                             chunk_overlap=30,
                                             separators=['\n','.',',','|'])
     splitted_pages = splitter.split_documents(documents)
 
-
-    embedding_model = FastEmbedEmbeddings(
-        model_name='BAAI/bge-small-en-v1.5',
-        threads=-1,
-        batch_size=128,
-
-    )
-
+    embedding_model = HuggingFaceEmbeddings(model_name='BAAI/bge-small-en-v1.5')    
     vector_db = FAISS.from_documents(
         embedding=embedding_model,
-        documents=splitted_pages,
-        docstore=InMemoryDocstore()
+        documents=splitted_pages
     )
-
     retriever = vector_db.as_retriever(k=3)
     
     prompt = ChatPromptTemplate.from_messages([
         SystemMessagePromptTemplate.from_template(
-            "You are an assistant for question-answering tasks. Use the following text extracted from a webpage to answer the question. Include the user's conversation history for context. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise and brief."
+            "You are an assistant for question-answering tasks. Use the following text extracted from a webpage to answer the question. Include the user's conversation history for context. If you don't know the answer, just say that you don't know and don't hallucinate answers. Use three sentences maximum and keep the answer concise and brief."
         ),
         HumanMessagePromptTemplate.from_template(
             "History: {history}\nQuestion: {question}\nDocuments: {documents}"
@@ -74,16 +74,19 @@ if url:
         max_retries=3,
         timeout=None
     )
-
-    query = st.text_input("Enter query")
+    
+    query = st.chat_input("Enter query")
     if query:
         retrieved_docs = retrieve_docs(query)
         question_dict = {"question":query, "documents":retrieved_docs}
         chain = prompt | llm | StrOutputParser()
+
+        if 'history' not in st.session_state:
+                st.session_state.history = []
+            
         
         def output(query: str):
-            if 'history' not in st.session_state:
-                st.session_state.history = []
+            
             retrieved_text = retrieve_docs(query)
             formatted_history = "\n".join([f"User: {q}\nAssistant: {a}" for q, a in st.session_state.history])
             question_dict = {
@@ -92,18 +95,17 @@ if url:
                 "documents": retrieved_text
             }
             response = chain.invoke(question_dict)
-            st.session_state.history.append((query,response))
+            
             return response       
         
         response = output(query)
-        if 'display' not in st.session_state:
-            st.session_state.display = []
-
-        for i in history:
-            st.session_state.display.append({"query":i[0], "reply":str(i[-1]).split("**Answer:**")[-1]})
+        response = str(response).split(".")[0]
+        st.session_state.history.append((query,response))
 
 
-        # for messages in st.session_state.display:
-        #     st.chat_message("user").markdown(messages['queries'])
-        #     st.chat_message('ai').markdown(messages['replies'])
-        st.write(st.session_state)
+
+        for messages in st.session_state.history[:-1]:
+            st.chat_message("user").markdown(messages[0])
+            st.chat_message('ai').markdown(stream(messages[1]))
+        st.chat_message("user").markdown(query)
+        st.chat_message('ai').write_stream(stream(response))
