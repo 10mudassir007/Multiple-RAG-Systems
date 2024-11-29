@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from .rag_webbased import retrieve_docs, stream
+from rag_webbased import retrieve_docs, stream
 
 class TestRAGWebBased(unittest.TestCase):
 
