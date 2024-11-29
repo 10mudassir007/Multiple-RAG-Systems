@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from rag_streamlit import generate
+from .rag_streamlit import generate
 
 class TestRAGStreamlit(unittest.TestCase):
 
