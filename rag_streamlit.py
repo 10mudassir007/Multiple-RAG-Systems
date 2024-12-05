@@ -18,7 +18,7 @@ st.set_page_config(
 )
 load_dotenv()
 
-groq_api = os.getenv("GROQ_API_KEY")
+groq_api = st.sidebar.text_input("Groq API Key",type="password")
 
 warnings.filterwarnings('ignore')
 
