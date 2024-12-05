@@ -13,8 +13,7 @@ import streamlit as st
 from io import BytesIO
 from dotenv import load_dotenv
 
-load_dotenv()
-groq_key = os.getenv("GROQ_API_KEY")
+grog_key = st.sidebar.text_input("Groq API Key",type='password')
 warnings.filterwarnings('ignore')
 
 st.title("RAG For WebPages")
