@@ -56,15 +56,17 @@ if uploaded_file is not None:
                     Answer:
                     """,
                     input_variables=['question',"documents"])
-        llm = ChatGroq(
-            api_key=groq_api,
-            model="llama-3.2-1b-preview",
-            temperature=0,
-            max_tokens=1024,
-            timeout=None,
-            max_retries=2,
-        )
-
+        try:
+            llm = ChatGroq(
+                api_key=groq_api,
+                model="llama-3.2-1b-preview",
+                temperature=0,
+                max_tokens=1024,
+                timeout=None,
+                max_retries=2,
+            )
+        except:
+            st.error("Please enter Groq API Key")
         rag_chain = prompt | llm | StrOutputParser()
 
         def generate(query):
