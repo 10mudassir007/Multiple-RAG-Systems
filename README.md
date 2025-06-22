@@ -64,11 +64,11 @@ Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/10mudassir007/Multiple-RAG-Systems.git
 cd Multiple-RAG-Systems
-
+```
 ## 📜 License
 
 This project is licensed under the **MIT License**.
 
 ---
 
-🚀 **RAG-Library** – Powering intelligent and scalable Retrieval-Augmented Generation workflows!
+🚀 **Multiple-RAG-Systems** – Powering intelligent and scalable Retrieval-Augmented Generation workflows!
