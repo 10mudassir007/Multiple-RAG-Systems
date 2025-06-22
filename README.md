@@ -62,8 +62,8 @@ The **With LlamaIndex** folder contains a simple RAG implementation:
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/rag-library.git
-cd rag-library
+git clone https://github.com/10mudassir007/Multiple-RAG-Systems.git
+cd Multiple-RAG-Systems
 
 ## 📜 License
 
