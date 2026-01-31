@@ -1,0 +1,101 @@
+name,department,role,salary,month,working_days,days_present
+Ali Khan,Engineering,Software Engineer,180000,Jan-2024,22,21
+Sara Ahmed,HR,HR Manager,140000,Jan-2024,22,20
+Usman Raza,Sales,Sales Executive,120000,Jan-2024,22,18
+Ayesha Noor,Engineering,ML Engineer,220000,Jan-2024,22,22
+Bilal Sheikh,Finance,Accountant,160000,Jan-2024,22,19
+Hamza Iqbal,Sales,Sales Manager,200000,Jan-2024,22,20
+Ali Khan,Engineering,Software Engineer,180000,Feb-2024,20,19
+Sara Ahmed,HR,HR Manager,140000,Feb-2024,20,18
+Usman Raza,Sales,Sales Executive,120000,Feb-2024,20,17
+Ayesha Noor,Engineering,ML Engineer,220000,Feb-2024,20,20
+Bilal Sheikh,Finance,Accountant,160000,Feb-2024,20,19
+Hamza Iqbal,Sales,Sales Manager,200000,Feb-2024,20,18
+Ali Khan,Engineering,Software Engineer,180000,Mar-2024,21,21
+Sara Ahmed,HR,HR Manager,140000,Mar-2024,21,19
+Usman Raza,Sales,Sales Executive,120000,Mar-2024,21,20
+Ayesha Noor,Engineering,ML Engineer,220000,Mar-2024,21,20
+Bilal Sheikh,Finance,Accountant,160000,Mar-2024,21,18
+Hamza Iqbal,Sales,Sales Manager,200000,Mar-2024,21,21
+Ali Khan,Engineering,Software Engineer,180000,Apr-2024,22,20
+Sara Ahmed,HR,HR Manager,140000,Apr-2024,22,22
+Usman Raza,Sales,Sales Executive,120000,Apr-2024,22,19
+Ayesha Noor,Engineering,ML Engineer,220000,Apr-2024,22,21
+Bilal Sheikh,Finance,Accountant,160000,Apr-2024,22,20
+Hamza Iqbal,Sales,Sales Manager,200000,Apr-2024,22,21
+Ali Khan,Engineering,Software Engineer,180000,May-2024,22,22
+Sara Ahmed,HR,HR Manager,140000,May-2024,22,21
+Usman Raza,Sales,Sales Executive,120000,May-2024,22,20
+Ayesha Noor,Engineering,ML Engineer,220000,May-2024,22,19
+Bilal Sheikh,Finance,Accountant,160000,May-2024,22,22
+Hamza Iqbal,Sales,Sales Manager,200000,May-2024,22,20
+Ali Khan,Engineering,Software Engineer,180000,Jun-2024,20,18
+Sara Ahmed,HR,HR Manager,140000,Jun-2024,20,20
+Usman Raza,Sales,Sales Executive,120000,Jun-2024,20,19
+Ayesha Noor,Engineering,ML Engineer,220000,Jun-2024,20,20
+Bilal Sheikh,Finance,Accountant,160000,Jun-2024,20,17
+Hamza Iqbal,Sales,Sales Manager,200000,Jun-2024,20,19
+Ali Khan,Engineering,Software Engineer,180000,Jul-2024,23,22
+Sara Ahmed,HR,HR Manager,140000,Jul-2024,23,21
+Usman Raza,Sales,Sales Executive,120000,Jul-2024,23,23
+Ayesha Noor,Engineering,ML Engineer,220000,Jul-2024,23,22
+Bilal Sheikh,Finance,Accountant,160000,Jul-2024,23,20
+Hamza Iqbal,Sales,Sales Manager,200000,Jul-2024,23,22
+Ali Khan,Engineering,Software Engineer,180000,Aug-2024,21,20
+Sara Ahmed,HR,HR Manager,140000,Aug-2024,21,18
+Usman Raza,Sales,Sales Executive,120000,Aug-2024,21,21
+Ayesha Noor,Engineering,ML Engineer,220000,Aug-2024,21,21
+Bilal Sheikh,Finance,Accountant,160000,Aug-2024,21,19
+Hamza Iqbal,Sales,Sales Manager,200000,Aug-2024,21,20
+Ali Khan,Engineering,Software Engineer,180000,Sep-2024,21,21
+Sara Ahmed,HR,HR Manager,140000,Sep-2024,21,20
+Usman Raza,Sales,Sales Executive,120000,Sep-2024,21,18
+Ayesha Noor,Engineering,ML Engineer,220000,Sep-2024,21,21
+Bilal Sheikh,Finance,Accountant,160000,Sep-2024,21,20
+Hamza Iqbal,Sales,Sales Manager,200000,Sep-2024,21,19
+Ali Khan,Engineering,Software Engineer,180000,Oct-2024,23,22
+Sara Ahmed,HR,HR Manager,140000,Oct-2024,23,23
+Usman Raza,Sales,Sales Executive,120000,Oct-2024,23,21
+Ayesha Noor,Engineering,ML Engineer,220000,Oct-2024,23,22
+Bilal Sheikh,Finance,Accountant,160000,Oct-2024,23,21
+Hamza Iqbal,Sales,Sales Manager,200000,Oct-2024,23,22
+Ali Khan,Engineering,Software Engineer,180000,Nov-2024,21,20
+Sara Ahmed,HR,HR Manager,140000,Nov-2024,21,19
+Usman Raza,Sales,Sales Executive,120000,Nov-2024,21,21
+Ayesha Noor,Engineering,ML Engineer,220000,Nov-2024,21,20
+Bilal Sheikh,Finance,Accountant,160000,Nov-2024,21,18
+Hamza Iqbal,Sales,Sales Manager,200000,Nov-2024,21,20
+Ali Khan,Engineering,Software Engineer,180000,Dec-2024,22,21
+Sara Ahmed,HR,HR Manager,140000,Dec-2024,22,20
+Usman Raza,Sales,Sales Executive,120000,Dec-2024,22,22
+Ayesha Noor,Engineering,ML Engineer,220000,Dec-2024,22,22
+Bilal Sheikh,Finance,Accountant,160000,Dec-2024,22,19
+Hamza Iqbal,Sales,Sales Manager,200000,Dec-2024,22,21
+Ali Khan,Engineering,Software Engineer,180000,Jan-2025,22,22
+Sara Ahmed,HR,HR Manager,140000,Jan-2025,22,21
+Usman Raza,Sales,Sales Executive,120000,Jan-2025,22,20
+Ayesha Noor,Engineering,ML Engineer,220000,Jan-2025,22,21
+Bilal Sheikh,Finance,Accountant,160000,Jan-2025,22,19
+Hamza Iqbal,Sales,Sales Manager,200000,Jan-2025,22,22
+Ali Khan,Engineering,Software Engineer,180000,Feb-2025,20,19
+Sara Ahmed,HR,HR Manager,140000,Feb-2025,20,20
+Usman Raza,Sales,Sales Executive,120000,Feb-2025,20,18
+Ayesha Noor,Engineering,ML Engineer,220000,Feb-2025,20,20
+Bilal Sheikh,Finance,Accountant,160000,Feb-2025,20,19
+Hamza Iqbal,Sales,Sales Manager,200000,Feb-2025,20,18
+Ali Khan,Engineering,Software Engineer,180000,Mar-2025,22,21
+Sara Ahmed,HR,HR Manager,140000,Mar-2025,22,22
+Usman Raza,Sales,Sales Executive,120000,Mar-2025,22,20
+Ayesha Noor,Engineering,ML Engineer,220000,Mar-2025,22,22
+Bilal Sheikh,Finance,Accountant,160000,Mar-2025,22,21
+Hamza Iqbal,Sales,Sales Manager,200000,Mar-2025,22,21
+Ali Khan,Engineering,Software Engineer,180000,Apr-2025,21,20
+Sara Ahmed,HR,HR Manager,140000,Apr-2025,21,19
+Usman Raza,Sales,Sales Executive,120000,Apr-2025,21,21
+Ayesha Noor,Engineering,ML Engineer,220000,Apr-2025,21,20
+Bilal Sheikh,Finance,Accountant,160000,Apr-2025,21,18
+Hamza Iqbal,Sales,Sales Manager,200000,Apr-2025,21,20
+Ali Khan,Engineering,Software Engineer,180000,May-2025,22,21
+Sara Ahmed,HR,HR Manager,140000,May-2025,22,20
+Usman Raza,Sales,Sales Executive,120000,May-2025,22,19
+Ayesha Noor,Engineering,ML Engineer,220000,May-2025,22,22

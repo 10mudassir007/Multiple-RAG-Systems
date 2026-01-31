@@ -1,0 +1,8 @@
+langchain==1.2.3 
+langchain_community==0.4.1
+langchain-groq==1.1.1
+langchain-qdrant==1.1.0 
+langchain-huggingface==1.2.0 
+sentence_transformers==5.2.0
+streamlit==1.52.2
+torch==2.8.0

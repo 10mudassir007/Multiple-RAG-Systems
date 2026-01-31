@@ -1,0 +1,101 @@
+invoice_id,date,client_name,industry,amount
+INV001,2024-01-05,Alpha Traders,Retail,150000
+INV002,2024-01-18,Beta Corp,IT Services,275000
+INV003,2024-02-02,Alpha Traders,Retail,98000
+INV004,2024-02-20,Delta Pvt Ltd,Manufacturing,340000
+INV005,2024-03-10,Gamma Solutions,IT Services,220000
+INV006,2024-04-01,Beta Corp,IT Services,185000
+INV007,2024-05-15,Omega Enterprises,Logistics,410000
+INV008,2024-06-22,Alpha Traders,Retail,130000
+INV009,2024-08-03,Gamma Solutions,IT Services,260000
+INV010,2024-11-19,Delta Pvt Ltd,Manufacturing,390000
+INV011,2024-01-12,Omega Enterprises,Logistics,315400
+INV012,2024-01-25,Alpha Traders,Retail,142200
+INV013,2024-02-08,Beta Corp,IT Services,289500
+INV014,2024-02-14,Delta Pvt Ltd,Manufacturing,355000
+INV015,2024-03-02,Gamma Solutions,IT Services,210800
+INV016,2024-03-22,Omega Enterprises,Logistics,425000
+INV017,2024-04-10,Alpha Traders,Retail,120600
+INV018,2024-04-28,Beta Corp,IT Services,195300
+INV019,2024-05-05,Delta Pvt Ltd,Manufacturing,380100
+INV020,2024-05-18,Gamma Solutions,IT Services,240000
+INV021,2024-01-07,Alpha Traders,Retail,155000
+INV022,2024-01-20,Beta Corp,IT Services,265000
+INV023,2024-02-10,Omega Enterprises,Logistics,412000
+INV024,2024-02-25,Delta Pvt Ltd,Manufacturing,335000
+INV025,2024-03-15,Gamma Solutions,IT Services,215000
+INV026,2024-04-05,Alpha Traders,Retail,148000
+INV027,2024-04-20,Beta Corp,IT Services,192000
+INV028,2024-05-25,Delta Pvt Ltd,Manufacturing,375000
+INV029,2024-06-10,Gamma Solutions,IT Services,255000
+INV030,2024-07-01,Omega Enterprises,Logistics,430000
+INV031,2024-01-15,Alpha Traders,Retail,160000
+INV032,2024-01-28,Beta Corp,IT Services,280000
+INV033,2024-02-12,Gamma Solutions,IT Services,225000
+INV034,2024-03-05,Delta Pvt Ltd,Manufacturing,345000
+INV035,2024-03-18,Omega Enterprises,Logistics,405000
+INV036,2024-04-15,Alpha Traders,Retail,135000
+INV037,2024-05-02,Beta Corp,IT Services,205000
+INV038,2024-05-30,Delta Pvt Ltd,Manufacturing,395000
+INV039,2024-06-15,Gamma Solutions,IT Services,245000
+INV040,2024-07-10,Omega Enterprises,Logistics,415000
+INV041,2024-01-22,Alpha Traders,Retail,145000
+INV042,2024-02-05,Beta Corp,IT Services,270000
+INV043,2024-02-18,Delta Pvt Ltd,Manufacturing,360000
+INV044,2024-03-25,Gamma Solutions,IT Services,235000
+INV045,2024-04-12,Omega Enterprises,Logistics,390000
+INV046,2024-05-08,Alpha Traders,Retail,125000
+INV047,2024-06-01,Beta Corp,IT Services,215000
+INV048,2024-06-25,Delta Pvt Ltd,Manufacturing,385000
+INV049,2024-07-15,Gamma Solutions,IT Services,250000
+INV050,2024-08-01,Omega Enterprises,Logistics,440000
+INV051,2024-01-30,Alpha Traders,Retail,152000
+INV052,2024-02-15,Beta Corp,IT Services,295000
+INV053,2024-03-10,Delta Pvt Ltd,Manufacturing,330000
+INV054,2024-04-01,Gamma Solutions,IT Services,228000
+INV055,2024-04-20,Omega Enterprises,Logistics,418000
+INV056,2024-05-15,Alpha Traders,Retail,138000
+INV057,2024-06-05,Beta Corp,IT Services,222000
+INV058,2024-06-28,Delta Pvt Ltd,Manufacturing,368000
+INV059,2024-07-20,Gamma Solutions,IT Services,262000
+INV060,2024-08-10,Omega Enterprises,Logistics,422000
+INV061,2024-02-01,Alpha Traders,Retail,147000
+INV062,2024-02-22,Beta Corp,IT Services,278000
+INV063,2024-03-12,Delta Pvt Ltd,Manufacturing,342000
+INV064,2024-04-05,Gamma Solutions,IT Services,238000
+INV065,2024-05-10,Omega Enterprises,Logistics,408000
+INV066,2024-06-01,Alpha Traders,Retail,132000
+INV067,2024-06-18,Beta Corp,IT Services,208000
+INV068,2024-07-05,Delta Pvt Ltd,Manufacturing,378000
+INV069,2024-08-15,Gamma Solutions,IT Services,248000
+INV070,2024-09-01,Omega Enterprises,Logistics,435000
+INV071,2024-02-10,Alpha Traders,Retail,158000
+INV072,2024-03-01,Beta Corp,IT Services,285000
+INV073,2024-03-20,Delta Pvt Ltd,Manufacturing,352000
+INV074,2024-04-15,Gamma Solutions,IT Services,232000
+INV075,2024-05-22,Omega Enterprises,Logistics,411000
+INV076,2024-06-12,Alpha Traders,Retail,141000
+INV077,2024-07-01,Beta Corp,IT Services,198000
+INV078,2024-07-25,Delta Pvt Ltd,Manufacturing,388000
+INV079,2024-08-20,Gamma Solutions,IT Services,258000
+INV080,2024-09-10,Omega Enterprises,Logistics,428000
+INV081,2024-03-05,Alpha Traders,Retail,162000
+INV082,2024-03-25,Beta Corp,IT Services,272000
+INV083,2024-04-18,Delta Pvt Ltd,Manufacturing,358000
+INV084,2024-05-10,Gamma Solutions,IT Services,221000
+INV085,2024-06-05,Omega Enterprises,Logistics,402000
+INV086,2024-06-25,Alpha Traders,Retail,128000
+INV087,2024-07-15,Beta Corp,IT Services,212000
+INV088,2024-08-05,Delta Pvt Ltd,Manufacturing,365000
+INV089,2024-09-20,Gamma Solutions,IT Services,265000
+INV090,2024-10-01,Omega Enterprises,Logistics,445000
+INV091,2024-04-01,Alpha Traders,Retail,154000
+INV092,2024-04-25,Beta Corp,IT Services,282000
+INV093,2024-05-15,Delta Pvt Ltd,Manufacturing,348000
+INV094,2024-06-10,Gamma Solutions,IT Services,230000
+INV095,2024-07-05,Omega Enterprises,Logistics,419000
+INV096,2024-07-28,Alpha Traders,Retail,136000
+INV097,2024-08-18,Beta Corp,IT Services,202000
+INV098,2024-09-12,Delta Pvt Ltd,Manufacturing,372000
+INV099,2024-10-05,Gamma Solutions,IT Services,252000
+INV100,2024-11-01,Omega Enterprises,Logistics,421000
