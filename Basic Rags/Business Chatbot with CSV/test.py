@@ -12,6 +12,5 @@ emmbeddings = HuggingFaceEmbeddings(model_name="ibm-granite/granite-embedding-sm
 
 
 query = "List my top 10 clients"
-a = 
-print(a)
+a = emmbeddings.embed_query(query)
 print(a)
